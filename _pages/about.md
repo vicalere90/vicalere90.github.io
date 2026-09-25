@@ -30,8 +30,9 @@ My research focuses on integrating neural networks with symbolic AI to support d
 
 - Neuro-symbolic AI
 - Multi-Agent Systems (MAS)
-- Autonomous Driving
+- Dual System
 
+<!--
 ---
 
 ## Publications
@@ -40,7 +41,7 @@ My research focuses on integrating neural networks with symbolic AI to support d
 
 *EMAS Workshop*, 2026.
 
-<!--
+
 
 ---
 
