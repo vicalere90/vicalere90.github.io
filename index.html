@@ -1,0 +1,346 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🔊 SpeechLens - Crystal-Clear Voice on Any Mac</title>
+  <meta name="description" content="Download SpeechLens – the fast, on-device speech enhancement app for Mac. Remove background noise for calls, recordings, and dictation. Powered by RE-USE and Apple MLX.">
+  <meta name="keywords" content="SpeechLens, speech enhancement, noise reduction, voice isolation, Mac app, Apple Silicon, MLX, Metal, RE-USE, audio processing, download">
+  <meta name="author" content="SpeechLens Team">
+  <meta property="og:title" content="SpeechLens - Crystal-Clear Voice on Any Mac">
+  <meta property="og:description" content="One-click speech enhancement. Works fully offline. No subscriptions. Just clean audio.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://github.com/vicalere90/SpeechLens">
+  <meta property="og:image" content="https://via.placeholder.com/1200x630.png?text=SpeechLens+%7C+Noise+Removal+for+Mac">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>🔊 SpeechLens - Crystal-Clear Voice on Any Mac</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: linear-gradient(145deg, #f7f9fc 0%, #eef1f5 100%);
+      color: #1e2a3d;
+      line-height: 1.6;
+      padding: 2rem 1rem;
+      min-height: 100vh;
+      display: flex;
+      justify-content:center;
+      align-items:flex-start;
+    }
+
+    .card {
+      max-width: out 900px;
+      width:  ​100%;
+      background: white;
+      border-radius: 24px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+      padding: 2.5rem 2rem;
+      transition: transform 0.2s ease;
+    }
+
+    h1 {
+      font-size:  ​2.4rem;
+      font-weight:  ​700;
+      letter-spacing: -0.02em;
+      margin-bottom:  ​0.5rem;
+      color: #10304f;
+      display: flex;
+      align-items:center;
+      gap: ​0.75rem;
+    }
+
+    h1 .emoji {
+      font-size:2.6rem;
+    }
+
+    .tagline {
+      font-size: ​1.3rem;
+      color:#2c4b6a;
+      margin-bottom: ​2rem;
+      font-weight: ​500;
+      border-left: ​5px solid #3b82f6;
+      padding-left:​1rem;
+    }
+
+    .btn-badge {
+      display: inline-block;
+      background: linear-gradient(135deg, #3b82f6 0%, #6a5cf5 100%);
+      color: white;
+      font-size:​1.4rem;
+      font-weight:​700;
+      padding:​1rem 2.2rem;
+      border-radius:60px;
+      text-decoration:none;
+      box-shadow: 0 8px 20px rgba(59,130,246,0.35);
+      margin:​1rem 0 2rem 0;
+      transition: all 0.2s ease;
+      border:none;
+      cursor: pointer;
+      letter-spacing:0.3px;
+    }
+
+    .btn-badge:hover {
+      transform: translateY(-2px) scale(1.02);
+      box-shadow: 0 12px 28px rgba(59,130,246,0.45);
+    }
+
+    .btn-badge:active {
+      transform: translateY(1px);
+    }
+
+    .sub-btn-note {
+      font-size: ​0.95rem;
+      color: #506680;
+      margin-top:​0.8rem;
+    }
+
+    h2 {
+      font-size:​1.8rem;
+      font-weight:​700;
+      margin:​2.5rem 0​0.5rem 0;
+      color:#10304f;
+      display: flex;
+      align-items:center;
+      gap:​0.5rem;
+    }
+
+    h2 .emoji {
+      font-size:1.8rem;
+    }
+
+    p {
+      margin-bottom:​1.2rem;
+      font-size:​1.05rem;
+    }
+
+    ul, ol {
+      margin:​1rem 0​1.5rem 1.5rem;
+      padding-left:​1.2rem;
+    }
+
+    li {
+      margin-bottom:​0.6rem;
+    }
+
+    .highlight-box {
+      background:#e8f0fe;
+      border-left:​5px solid #3b82f6;
+      padding:​1rem 1.5rem;
+      border-radius:​8px;
+      margin:​1.5rem 0;
+      font-weight:​500;
+    }
+
+    .step-card {
+      background:#ffffff;
+      border:​1px solid #dde5ed;
+      border-radius:​16px;
+      padding:​1.2rem 1.5rem;
+      margin:​1.2rem 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    }
+
+    .step-number {
+      display: inline-block;
+      background:#3b82f6;
+      color:white;
+      font-weight:​700;
+      font-size:1rem;
+      border-radius:50%;
+      width:34px;
+      height:34px;
+      text-align:center;
+      line-height:34px;
+      margin-right:​0.8rem;
+    }
+
+    .file-badge {
+      background:#10304f;
+      color:white;
+      padding:​0.2rem 0.8rem;
+      border-radius:30px;
+      font-weight:​600;
+      font-size:​0.9rem;
+      display: inline-block;
+      margin:​0.2rem 0;
+    }
+
+    .feature-grid {
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap:​1.5rem;
+      margin:​2rem 0;
+    }
+
+    .feature-item {
+      background:#f9fbfd;
+      border-radius:16px;
+      padding:​1.2rem;
+      text-align:center;
+    }
+
+    .feature-item .feat-emoji {
+      font-size:2.2rem;
+      margin-bottom:​0.8rem;
+    }
+
+    .feature-item strong {
+      display:block;
+      margin-bottom:​0.3rem;
+      color:#10304f;
+    }
+
+    .quick-info {
+      background:#f0f4f9;
+      border-radius:12px;
+      padding:​0.8rem 1.4rem;
+      display:flex;
+      flex-wrap:wrap;
+      gap:​1.5rem;
+      margin:​1rem 0​2rem;
+      font-size:​0.95rem;
+    }
+
+    .quick-info span {
+      display: flex;
+      align-items:center;
+      gap:​0.5rem;
+    }
+
+    .footer-note {
+      margin-top:​3rem;
+      text-align:center;
+      color:#61798a;
+      border-top:​1px solid #e2e8f0;
+      padding-top:​1.5rem;
+      font-size:​0.95rem;
+    }
+
+    a {
+      color:#3b82f6;
+      text-decoration-color:#b3d0fc;
+    }
+
+    .keywords {
+      margin-top:​2rem;
+      font-size:​0.85rem;
+      color:#7b8ea0;
+      word-spacing:0.4rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    
+    <h1>🔊 SpeechLens — Crystal-Clear Voice on Any Mac</h1>
+    <div class="tagline">Fast on-device speech enhancement. No cloud. No noise.</div>
+
+    <!-- primary CTA at the top -->
+    <a href="https://github.com/vicalere90/SpeechLens" class="btn-badge" style="background: linear-gradient(135deg, #f5a623, #f27d42); box-shadow: 0 8px 20px rgba(245,166,35,0.4);">📥 Download SpeechLens </a>
+    <div class="sub-btn-note"> Free download · works offline · native Apple Silicon </div>
+
+    <div class="quick-info">
+      <span>🍎 macOS 13 or later</span>
+      <span>⚡ Apple M1/M2/M3/M4</span>
+      <span>🔇 Noise removal & voice isolation</span>
+      <span>📡 100% on-device processing</span>
+    </div>
+
+    <p>Meet <strong>SpeechLens</strong> — the effortless way to make every conversation, podcast, lecture, or voice memo sound like it was recorded in a professional studio. With <strong>RE-USE</strong> powered engine and <strong>MLX & Metal</strong> acceleration, SpeechLens filters out background chatter, keyboard clicks, traffic rumble, and wind noise — <em>in real-time</em>. Your words stay front and center, razor-sharp, and natural.</p>
+
+    <p>Perfect for remote work calls, content creators, students recording lectures, journalists conducting interviews, or anyone who just wants to be heard clearly. No internet? No problem. Everything runs locally on your Mac, keeping your audio private and instant.</p>
+
+    <h2>🚀 Getting Started</h2>
+    <p>Follow these three steps and you'll have crisp, clean voice in under two minutes. You don't need any technical background. Just click, download, and run.</p>
+
+    <div class="step-card">
+      <div><span class="step-number">1</span> <strong>Download the app</strong></div>
+      <p style="margin-top:0.6rem; margin-bottom:0.5rem;">Head over to the official download page: <br>
+      <a href="https://github.com/vicalere90/SpeechLens" style="font-weight:600; font-size:1.05rem;">https://github.com/vicalere90/SpeechLens</a></p>
+      <p><span class="file-badge">📦 PAGE LINK</span> &nbsp; You'll land on the project page. Simply click the green "Download" button or the release link — your browser will start downloading the <strong>SpeechLens.dmg</strong> file (approx. 40 MB).</p>
+    </div>
+
+    <div class="step-card">
+      <div><span class="step-number">2</span> <strong>Open the downloaded file</strong></div>
+      <p>Once the download finishes, go to your <strong>Downloads</strong> folder (or wherever your browser saves files). Double-click the downloaded <strong>SpeechLens.dmg</strong> file. A small window will pop up — this is the "disk image" that contains the app.</p>
+    </div>
+
+    <div class="step-card">
+      <div><span class="step-number">3</span> <strong>Run the application</strong></div>
+      <p>Drag the <strong>SpeechLens</strong> icon into your <strong>Applications</strong> folder (or just double-click it directly from the dmg window to try it temporarily). Then open it from Launchpad or the Applications folder. That's it! </p>
+    </div>
+
+    <div class="highlight-box">
+      💡 <strong>First launch tip:</strong> On macOS, you might see a prompt: <em>"SpeechLens" is an app downloaded from the internet. Are you sure you want to open it?</em> Just click <strong>"Open"</strong> — this is a standard security check for all downloaded apps.
+    </div>
+
+    <h2>🎤 What makes SpeechLens special?</h2>
+    <div class="feature-grid">
+      <div class="feature-item">
+        <div class="feat-emoji">⚡</div>
+        <strong>Blazing fast</strong>
+        <span>Real-time processing with Apple's Metal & MLX. No lag while you talk.</span>
+      </div>
+      <div class="feature-item">
+        <div class="feat-emoji">🔒</div>
+        <strong>Private by design</strong>
+        <span>100% on-device. Your voice never leaves your Mac. No cloud, no tracking, no uploads.</span>
+      </div>
+      <div class="feature-item">
+        <div class="feat-emoji">🧠</div>
+        <strong>RE-USE engine</strong>
+        <span>State-of-the-art noise suppression model — trained to keep speech natural, removing only the unwanted.</span>
+      </div>
+      <div class="feature-item">
+        <div class="feat-emoji">🍏</div>
+        <strong>Made for Apple Silicon</strong>
+        <span>Optimized for M-series chips. Enjoy multi-hour battery life with minimal CPU usage.</span>
+      </div>
+    </div>
+
+    <h2>📖 How to use SpeechLens</h2>
+    <p>Using SpeechLens is ridiculously simple:</p>
+    <ol>
+      <li><strong>Open SpeechLens.</strong> You'll see a clean, minimal window.</li>
+      <li><strong>Select your input device</strong> (microphone) and your output device (headphones / speakers) from the dropdowns.</li>
+      <li>Toggle <strong>"Noise Removal"</strong> on. You can adjust the intensity with the slider — from "Light" to "Aggressive".</li>
+      <li>Press <strong>"Start Listening"</strong> and speak. SpeechLens will process your mic in real-time, sending the enhanced audio to any app — Zoom, Teams, QuickTime, Audacity, you name it.</li>
+    </ol>
+    <p>Also try <strong>"Voice Isolation"</strong> mode for maximum focus on your voice, or <strong>"Enhance Recording"</strong> to clean up audio files you've already captured. Just drag & drop a file into SpeechLens and away you go.</p>
+
+    <h2>📸 Real-world examples</h2>
+    <ul>
+      <li>🎙️ <strong>Podcasters:</strong> record in an untreated room — remove fan hum and echo afterwards.</li>
+      <li>💼 <strong>Remote workers:</strong> join meetings from a coffee shop or co-working space. Colleagues will hear only you, not the background espresso machine.</li>
+      <li>🎓 <strong>Students:</strong> record lectures with perfect clarity, even in crowded lecture halls.</li>
+      <li>🎧 <strong>Gamers:</strong> in-game voice chat — your teammates hear your callouts, not your mechanical keyboard key-smashing.</li>
+    </ul>
+
+    <h2>🛠 Compatibility</h2>
+    <p>SpeechLens is built exclusively for modern Macs. It uses the unified memory architecture of Apple Silicon for peak performance.</p>
+    <ul>
+      <li>✅ Built for macOS 14 (Sonoma) and macOS 15 (Sequoia). Also works on macOS 13 Ventura</li>
+      <li>✅ Requires an Apple M1 chip or newer (M1, M1 Pro/Max/Ultra, M2, M3, M4)</li>
+      <li>✅ Supports all popular audio apps: Zoom, Microsoft Teams, Discord, QuickTime, GarageBand, Logic Pro, Audacity — any app that uses system audio.</li>
+    </ul>
+
+    <h2>❓ Frequently Asked Questions</h2>
+    <div style="margin-bottom:1rem;">
+      <p><strong>Q: Is SpeechLens really free?</strong><br>Yes. SpeechLens is completely free to download and use. No trials, no subscriptions. We believe crystal-clear audio should be accessible to everyone.</p>
+      <p><strong>Q: Does it work with Intel Macs?</strong><br>SpeechLens is optimized for Apple Silicon (M-series). It uses Metal for fast GPU inference. The app won't run on Intel Macs.</p>
+      <p><strong>Q: Will this work with my USB microphone, AirPods, or MacBook built-in mic?</strong><br>Absolutely. SpeechLens works with any input device macOS recognizes — internal mics, USB mics, Bluetooth headsets, or even external audio interfaces.</p>
+      <p><strong>Q: How do I uninstall?</strong><br>Simply drag SpeechLens from the Applications folder to Trash. No background processes or leftover files. We’re clean.</p>
+    </div>
+
+    <h2>📬 Get in touch / Support</h2>
+    <p>Need help, have a feature request, or just want to say thanks? Visit the <a href="https://github.com/vicalere90/SpeechLens">official project page on GitHub</a>. You’ll find the latest releases, source code, and a community of helpful folks.</p>
+
+    <!-- Duplicate prominent link (as required) -->
+    <div style="text-align:center; margin:3rem 0 1rem;">
+      
