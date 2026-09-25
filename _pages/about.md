@@ -66,7 +66,7 @@ College of Continuing Education
 
 Diploma in Business Management, 2015–2017
 
--->
+
 
 ---
 
@@ -82,7 +82,7 @@ Diploma in Business Management, 2015–2017
 
 - Compared one-stage and two-stage object detection approaches
 - Evaluated Faster R-CNN, Cascade R-CNN, and YOLOX
-
+-->
 ---
 
 ## Contact
